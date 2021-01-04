@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= turbo_stream_from @room %>
+
 <%= turbo_frame_tag "room" do %>
   <p>
     <strong>Name:</strong>
@@ -9,14 +11,15 @@
   <p>
     <%= link_to 'Edit', edit_room_path(@room) %> |
     <%= link_to 'Back', rooms_path, "data-turbo-frame": "_top" %>
-    <%# Fix the Back link by add data-turbo-frame with "_top" attribute %>
+    <%# Fix the Back link to other page break out the frame by add data-turbo-frame with "_top" attribute %>
   </p>
 <% end %>
 
+<%= turbo_frame_tag "new_message", src: new_room_message_path(@room), target: "_top" %>
+
 <div id="messages">
-  <%= render @room.messages %>
+  <%= render @room.messages.desc_order %>
 </div>
 
-<%= turbo_frame_tag "new_message", src: new_room_message_path(@room), target: "_top" %>
 
 
