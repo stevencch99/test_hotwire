@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Hotwire gem demo usage from: [Hotwire: The Demo](https://youtu.be/eKY-QES1XQQ) I have made slightly change and comment in it.
 
-Things you may want to cover:
+Once a chat room been created, all others in the same chat room can send messages and see it pop instantly on every window.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ruby version: 2.7.0
